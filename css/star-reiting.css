@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/*----star-reiting ★★★★★-----*/
+.raiting {
+  font-size: 21px;
+  position: relative;
+  display: inline-block; }
+  .raiting::before {
+    content: '★★★★★';
+    display: block; }
+  .raiting__items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    overflow: hidden; }
+  .raiting__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden; }
+    .raiting__item:checked,
+    .raiting__item:checked ~ .raiting__lable {
+      color: #FFC54F; }
+  .raiting__lable {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    height: 100%;
+    cursor: pointer; }
+    .raiting__lable::before {
+      content: '★';
+      display: block;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+    .raiting__lable:hover,
+    .raiting__lable:hover ~ .raiting__lable,
+    .raiting__lable:checked ~ .raiting__lable:hover {
+      color: #ffef9f; }
+
+/*------------------------------*/
